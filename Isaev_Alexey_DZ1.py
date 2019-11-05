@@ -31,11 +31,21 @@
 #     hour = '0' + str(hour)
 # print(f'{hour}:{minutes}:{sec}')
 #
-# step3
-n = int(input('Вариант 1. Введите число '))
-result = n + (n*11) + (n*111)
-print(result)
+# # step3
+# n = int(input('Вариант 1. Введите число '))
+# result = n + (n*11) + (n*111)
+# print(result)
+#
+# n = int(input('Вариант 2. Введите число '))
+# result = n + int(str(n)+str(n)) + int(str(n)+str(n)+str(n))
+# print(result)
 
-n = int(input('Вариант 2. Введите число '))
-result = n + int(str(n)+str(n)) + int(str(n)+str(n)+str(n))
-print(result)
+# step4
+n = int(input('Введите целое положительное число '))
+max_num = 0
+while n % 10 > 0:
+    x = n % 10
+    if max_num < x:
+        max_num = x
+    n = n // 10
+print(max_num)
