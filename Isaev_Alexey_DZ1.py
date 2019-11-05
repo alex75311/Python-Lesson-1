@@ -39,13 +39,30 @@
 # n = int(input('Вариант 2. Введите число '))
 # result = n + int(str(n)+str(n)) + int(str(n)+str(n)+str(n))
 # print(result)
+#
+# # step4
+# n = int(input('Введите целое положительное число '))
+# max_num = 0
+# while n % 10 > 0:
+#     x = n % 10
+#     if max_num < x:
+#         max_num = x
+#     n = n // 10
+# print(max_num)
 
-# step4
-n = int(input('Введите целое положительное число '))
-max_num = 0
-while n % 10 > 0:
-    x = n % 10
-    if max_num < x:
-        max_num = x
-    n = n // 10
-print(max_num)
+# step5
+vyruchka = int(input('Введите сумму выручки '))
+izderzhki = int(input('Введите сумму издержек '))
+if izderzhki > vyruchka:
+    print('Сработали в убыток')
+elif vyruchka > izderzhki:
+    pribyl = vyruchka - izderzhki
+    print('Прибыль составила', pribyl)
+    rent = pribyl / vyruchka
+    print('Рентабельность {:.2f}'.format(rent))
+    count = int(input('Введите количество сотрудников '))
+    print(f'Прибыль в расчете на одного сотрудника составила {int(pribyl / count)}')
+
+else:
+    print('Сработали в ноль')
+
