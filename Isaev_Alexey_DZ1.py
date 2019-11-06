@@ -21,7 +21,7 @@
 # Ответ: на 6-й день спортсмен достиг результата — не менее 3 км.
 
 # https://github.com/alex75311/Python-Lesson-1.git
-
+#
 # step1
 a = 10
 b = 'stroka'
@@ -43,10 +43,10 @@ time_sec = int(input('Введите время в секундах '))
 hour, minutes, sec = 0, 0, 0
 if time_sec >= 60:
     minutes = time_sec // 60
-    sec = time_sec % 60
-    if minutes >= 60:
-        hour = minutes // 60
-        minutes = minutes % 60
+sec = time_sec % 60
+if minutes >= 60:
+    hour = minutes // 60
+    minutes = minutes % 60
 if sec < 10:
     sec = '0' + str(sec)
 if minutes < 10:
@@ -67,7 +67,7 @@ print(result)
 # step4
 n = int(input('Введите целое положительное число '))
 max_num = 0
-while n % 10 > 0:
+while (n % 10 > 0) or (n // 10 > 0):
     x = n % 10
     if max_num < x:
         max_num = x
