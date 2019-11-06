@@ -32,11 +32,11 @@ if hour < 10:
 print(f'{hour}:{minutes}:{sec}')
 
 # step3
-n = int(input('Вариант 1. Введите число '))
+n = int(input('Вариант 1 только для однозначных чисел. Введите число '))
 result = n + (n*11) + (n*111)
 print(result)
 
-n = int(input('Вариант 2. Введите число '))
+n = int(input('Вариант 2 для любых чисел. Введите число '))
 result = n + int(str(n)+str(n)) + int(str(n)+str(n)+str(n))
 print(result)
 
@@ -75,11 +75,3 @@ while a < b:
     result += 1
     # print(a)
 print(f'на {result} день спортсмен достиг результата - не менее {b} км.')
-
-
-
-
-
-
-
-
