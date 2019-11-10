@@ -1,5 +1,5 @@
-# Python-Lesson-1 
-Lesson 1 
+# Python-homework-1 
+Homework 1 
 
 Практическое задание
 
