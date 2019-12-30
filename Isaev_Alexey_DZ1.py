@@ -40,7 +40,7 @@ print(f''' Первое число {int1} \n Второе число {int2} \n �
 
 # step2
 time_sec = int(input('Введите время в секундах '))
-hour, minutes, sec = 0, 0, 0
+hour = minutes = sec = 0
 if time_sec >= 60:
     minutes = time_sec // 60
 sec = time_sec % 60
@@ -57,20 +57,17 @@ print(f'{hour}:{minutes}:{sec}')
 
 # step3
 n = int(input('Вариант 1 только для однозначных чисел. Введите число '))
-result = n + (n*11) + (n*111)
-print(result)
+print(n + (n * 11) + (n * 111))
 
 n = int(input('Вариант 2 для любых чисел. Введите число '))
-result = n + int(str(n)+str(n)) + int(str(n)+str(n)+str(n))
-print(result)
+print(n + int(str(n) + str(n)) + int(str(n) + str(n) + str(n)))
 
 # step4
 n = int(input('Введите целое положительное число '))
 max_num = 0
-while (n % 10 > 0) or (n // 10 > 0):
-    x = n % 10
-    if max_num < x:
-        max_num = x
+while n != 0:
+    if max_num < n % 10:
+        max_num = n % 10
     n = n // 10
 print(max_num)
 
@@ -86,7 +83,6 @@ elif vyruchka > izderzhki:
     print('Рентабельность {:.2f}'.format(rent))
     count = int(input('Введите количество сотрудников '))
     print(f'Прибыль в расчете на одного сотрудника составила {int(pribyl / count)}')
-
 else:
     print('Сработали в ноль')
 
@@ -97,5 +93,4 @@ result = 1
 while a < b:
     a = a + a * 0.1
     result += 1
-    # print(a)
 print(f'на {result} день спортсмен достиг результата - не менее {b} км.')
